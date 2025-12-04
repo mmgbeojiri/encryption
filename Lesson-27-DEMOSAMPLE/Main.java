@@ -47,7 +47,7 @@ class Main {
    
   String encode(String str) {
     char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
-    char[] sub2 = {'&','$','!','#','^','@','3','|','0','*'};
+    char[] sub2 = {'&','=','+','#','^','@','3','|','0',';'};
 
     //return ReplaceVowels(NonConstantCipher(Reverse(str), 1),sub1, sub2);
     return NonConstantCipher(Reverse(str), 1);
@@ -55,14 +55,14 @@ class Main {
 
   String decode(String str) {
     char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
-    char[] sub2 = {'&','$','!','#','^','@','3','|','0','*'};
+    char[] sub2 = {'&','=','+','#','^','@','3','|','0',';'};
 
     // first: replace the censors with vowels; 
     // second: find a way to reverse NonConstantCipher (remember how we used the function in desmos and its inverse?)
     // third: reverse string
     // fourth: return string
 
-    //String str1 = ReplaceVowels(str, sub2 , sub1 );
+    String str1 = ReplaceVowels(str, sub2 , sub1 );
     String str2 = NonConstantCipher(str, -1 );
     String str3 = Reverse(str2);
     return str3;
