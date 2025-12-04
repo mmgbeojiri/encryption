@@ -49,20 +49,21 @@ class Main {
     char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
     char[] sub2 = {'&','$','!','#','^','@','3','|','0','*'};
 
-    return ReplaceVowels(NonConstantCipher(Reverse(str), 1),sub1, sub2);
+    //return ReplaceVowels(NonConstantCipher(Reverse(str), 1),sub1, sub2);
+    return NonConstantCipher(Reverse(str), 1);
   }
 
   String decode(String str) {
     char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
     char[] sub2 = {'&','$','!','#','^','@','3','|','0','*'};
 
-    // first: replace the censors with vowels; x
+    // first: replace the censors with vowels; 
     // second: find a way to reverse NonConstantCipher (remember how we used the function in desmos and its inverse?)
     // third: reverse string
     // fourth: return string
 
-    String str1 = ReplaceVowels(str, sub2 , sub1 );
-    String str2 = NonConstantCipher(str1, -1 );
+    //String str1 = ReplaceVowels(str, sub2 , sub1 );
+    String str2 = NonConstantCipher(str, -1 );
     String str3 = Reverse(str2);
     return str3;
     
@@ -79,12 +80,15 @@ class Main {
      
     String file1 = Input.readFile("Original.txt");
     System.out.println(file1);
-    
+
     String encodedFile = encode(file1);
     System.out.println(encodedFile);
 
     String decodedFile = decode(encodedFile);
     System.out.println(decodedFile);
+
+    System.out.println(encode("Attack them!"));
+    System.out.println(decode("\"0hly!mf3y*C"));
        
 
     
