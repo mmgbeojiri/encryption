@@ -56,7 +56,7 @@ class Main {
     // Encoding message
      
     String file1 = Input.readFile("Original.txt");
-    
+    System.out.println(file1);
     System.out.println(encode(file1));
        
 

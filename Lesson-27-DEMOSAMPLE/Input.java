@@ -5,7 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.io.IOException;
 
-class Input{
+public class Input{
 
     public static Scanner sc = new Scanner(System.in);
     public static int readInt(){
