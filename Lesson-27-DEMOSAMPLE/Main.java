@@ -49,25 +49,9 @@ class Main {
     }
   void init(){
 
-    // This example we are substituting all lower case 
-    // letters to another lower case letter.
-    char[] sub = new char[5];
-    sub[0] = 'a';
-    sub[1] = 'e';
-    sub[2] = 'i';
-    sub[3] = 'o';
-    sub[4] = 'u';
-
-    char[] sub2 = new char[5];
-    sub2[0] = '\u2663';  // Club
-    sub2[1] = '\u2660';  // Spade
-    sub2[2] = '\u2665';  // Heart
-    sub2[3] = '\u2666';  // Diamond
-    sub2[4] = '\u2836';  // Bralle symbol
-
-    
     // Encoding message
-        System.out.println("Try programiz.pro");
+     
+    String file1 = Input.readFile("Original.txt");
         char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
         char[] sub2 = {'&','$','!','#','^','@','3','|','0','*'};
        
@@ -80,8 +64,7 @@ class Main {
        
 
     
-    // decoding message
-    String file2 = Input.readFile("Encode1.txt");
+   
     
     String decodedMsg1 = reverse(file2);
     //Input.writeFile("Decode1.txt", decodedMsg1);
