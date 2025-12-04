@@ -51,6 +51,21 @@ class Main {
 
     return ReplaceVowels(NonConstantCipher(Reverse(str), 1),sub1, sub2);
   }
+
+  String decode(String str) {
+    char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
+    char[] sub2 = {'&','$','!','#','^','@','3','|','0','*'};
+
+    // first: replace the censors with vowels;
+    // second: find a way to reverse NonConstantCipher (remember how we used the function in desmos and its inverse?)
+    // third: reverse string
+    // fourth: return string
+
+
+    
+
+    
+  }
   void init(){
 
     // Encoding message
@@ -67,11 +82,5 @@ class Main {
     
   }
 
-  
-  
-  int randInt(int lower, int upper){
-    int range = upper - lower;
-    return (int)(Math.random()*range+lower);
-  }
 
 }
