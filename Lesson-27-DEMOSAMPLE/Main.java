@@ -87,8 +87,10 @@ class Main {
     String decodedFile = decode(encodedFile);
     System.out.println(decodedFile);
 
-    System.out.println(encode("Attack them!"));
-    System.out.println(decode("\"0hly!mf3y*C"));
+    String file2 = Input.readFile("test.txt");
+
+    System.out.println(encode(file2));
+    System.out.println(decode("/uuispulvu!qq$jlcW$&ledxyb"));
        
 
     
