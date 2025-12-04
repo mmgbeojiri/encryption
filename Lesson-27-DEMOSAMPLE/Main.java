@@ -56,13 +56,20 @@ class Main {
     char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
     char[] sub2 = {'&','$','!','#','^','@','3','|','0','*'};
 
-    // first: replace the censors with vowels;
+    // first: replace the censors with vowels; x
     // second: find a way to reverse NonConstantCipher (remember how we used the function in desmos and its inverse?)
     // third: reverse string
     // fourth: return string
 
+    String str1 = ReplaceVowels(str, sub2 , sub1 );
+    String str2 = NonConstantCipher(str1, -1 );
+    String str3 = Reverse(str2);
+    return str3;
+    
+
 
     
+
 
     
   }
@@ -72,7 +79,12 @@ class Main {
      
     String file1 = Input.readFile("Original.txt");
     System.out.println(file1);
-    System.out.println(encode(file1));
+    
+    String encodedFile = encode(file1);
+    System.out.println(encodedFile);
+
+    String decodedFile = decode(encodedFile);
+    System.out.println(decodedFile);
        
 
     
