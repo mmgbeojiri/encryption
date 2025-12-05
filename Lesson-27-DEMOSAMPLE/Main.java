@@ -1,3 +1,5 @@
+
+
 class Main {
   public static void main(String[] args) {
     (new Main()).init();
@@ -47,7 +49,7 @@ class Main {
    
   String encode(String str) {
     char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
-    char[] sub2 = {'&','=','+','#','^','@','3','|','0',';'};
+    char[] sub2 = {'™','Š','†','§','€','Å','¬','þ','µ','Ž'};
 
     return ReplaceVowels(NonConstantCipher(Reverse(str), 1),sub1, sub2);
     //return NonConstantCipher(Reverse(str), 1);
@@ -55,7 +57,7 @@ class Main {
 
   String decode(String str) {
     char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
-    char[] sub2 = {'&','=','+','#','^','@','3','|','0',';'};
+    char[] sub2 = {'™','Š','†','§','€','Å','¬','þ','µ','Ž'};
 
     // first: replace the censors with vowels; 
     // second: find a way to reverse NonConstantCipher (remember how we used the function in desmos and its inverse?)
@@ -90,7 +92,7 @@ class Main {
     String file2 = Input.readFile("test.txt");
 
     System.out.println(encode(file2));
-    System.out.println(decode("/uuispulvu!qq$jlcW$&ledxyb"));
+    System.out.println(decode("/ŽŽþspŽlvŽ!qq$jlcW$&l¬dxyb"));
        
 
     
