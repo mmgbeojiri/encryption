@@ -49,8 +49,8 @@ class Main {
     char[] sub1 = {'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u'};
     char[] sub2 = {'&','=','+','#','^','@','3','|','0',';'};
 
-    //return ReplaceVowels(NonConstantCipher(Reverse(str), 1),sub1, sub2);
-    return NonConstantCipher(Reverse(str), 1);
+    return ReplaceVowels(NonConstantCipher(Reverse(str), 1),sub1, sub2);
+    //return NonConstantCipher(Reverse(str), 1);
   }
 
   String decode(String str) {
@@ -63,7 +63,7 @@ class Main {
     // fourth: return string
 
     String str1 = ReplaceVowels(str, sub2 , sub1 );
-    String str2 = NonConstantCipher(str, -1 );
+    String str2 = NonConstantCipher(str1, -1 );
     String str3 = Reverse(str2);
     return str3;
     
